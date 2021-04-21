@@ -4,10 +4,10 @@ using UnityEditor;
 
 namespace UnityStandardAssets.Water
 {
-    [CustomEditor(typeof(PlanarReflection))]
+   // [CustomEditor(typeof(PlanarReflection))]
     public class PlanarReflectionEditor : Editor
     {
-        private SerializedObject serObj;
+       /* private SerializedObject serObj;
 
         //private SerializedProperty wavesFrequency;
 
@@ -59,7 +59,7 @@ namespace UnityStandardAssets.Water
             EditorGUILayout.EndToggleGroup();
 
             serObj.ApplyModifiedProperties();
-        }
+        }*/
 
     }
 }

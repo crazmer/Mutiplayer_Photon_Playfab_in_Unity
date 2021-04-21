@@ -62,8 +62,10 @@ public class PlayerSetup : MonoBehaviourPunCallbacks
                 playerUIGameObject.transform.Find("Fixed Joystick").GetComponent<Joystick>();
             playerMovementController.fixedTouchField =
                 playerUIGameObject.transform.Find("RotationTouchPanel").GetComponent<FixedTouchField>();
+            //Assign Buttons to Player UI
             playerUIGameObject.transform.Find("Shoot").GetComponent<Button>().onClick.AddListener(() => shooter.Attack());
-
+            playerUIGameObject.transform.Find("goDown").GetComponent<Button>().onClick.AddListener(() => playerMovementController.goDown());
+            playerUIGameObject.transform.Find("goUp").GetComponent<Button>().onClick.AddListener(() => playerMovementController.goUp());
             FPSCamera.enabled = true;
             // Set hand model animation
             animator.SetBool("IsPlayerModel", false);

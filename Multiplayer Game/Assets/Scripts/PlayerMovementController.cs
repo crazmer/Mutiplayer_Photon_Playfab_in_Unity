@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
+using UnityEngine.UI;
 
 public class PlayerMovementController : MonoBehaviour
 {
@@ -10,12 +11,19 @@ public class PlayerMovementController : MonoBehaviour
 
     private Animator animator;
     private RigidbodyFirstPersonController rbController;
+    private Rigidbody rb;
+    public int speed ;
 
+    public GameObject goUpButton;
+    public GameObject goDownButton;
     // Start is called before the first frame update
     void Start()
     {
         rbController = GetComponent<RigidbodyFirstPersonController>();
         animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
+        
+
     }
 
     private void FixedUpdate()
@@ -27,7 +35,7 @@ public class PlayerMovementController : MonoBehaviour
         // Set up animation speed according to the joystick (player movement speed)
         animator.SetFloat("Horizontal", joystick.Horizontal);
         animator.SetFloat("Vertical", joystick.Vertical);
-
+        
         RunningAndWalking();
     }
 
@@ -46,6 +54,16 @@ public class PlayerMovementController : MonoBehaviour
             rbController.movementSettings.ForwardSpeed = 5;
             animator.SetBool("IsRunning", false);
         }
+    }
+    public void goUp()
+    {
+        rb.AddForce  (Vector3.up * speed * 100 * Time.deltaTime);
+        Debug.Log("Up");
+    }
+    public void goDown()
+    {
+        rb.AddForce ( -Vector3.up * speed * 100 * Time.deltaTime);
+        Debug.Log("Down");
     }
 }
 

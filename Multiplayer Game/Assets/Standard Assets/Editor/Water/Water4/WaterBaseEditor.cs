@@ -4,11 +4,11 @@ using UnityEditor;
 
 namespace UnityStandardAssets.Water
 {
-    [CustomEditor(typeof(WaterBase))]
-    public class WaterBaseEditor : Editor
+   // [CustomEditor(typeof(WaterBase))]
+    /*public class WaterBaseEditor : Editor
     {
         public GameObject oceanBase;
-        private WaterBase waterBase;
+        //private WaterBase waterBase;
         private Material oceanMaterial = null;
 
         private SerializedObject serObj;
@@ -192,5 +192,5 @@ namespace UnityStandardAssets.Water
             serObj.ApplyModifiedProperties();
         }
 
-    }
+    }*/
 }
