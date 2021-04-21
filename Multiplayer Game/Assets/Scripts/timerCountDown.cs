@@ -37,11 +37,11 @@ public class timerCountDown : MonoBehaviour
 
         if(minutes>0)
         {
-            timerText.text += minutes + "m";
+            timerText.text += minutes + ":";
         }
         if (seconds > 0)
         {
-            timerText.text += seconds + "s";
+            timerText.text += seconds + "";
         }
     }
     
