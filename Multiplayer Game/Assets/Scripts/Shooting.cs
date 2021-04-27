@@ -13,6 +13,7 @@ public class Shooting : MonoBehaviourPunCallbacks
     public AudioSource deathSound;
 
     private Text healthText;
+    private Text scoretext;
     private float health = 100f;
     private Animator playerAnimator;
     private Animator hurtPanelAnimator;
@@ -20,17 +21,20 @@ public class Shooting : MonoBehaviourPunCallbacks
     private GameObject respawnText;
 
     public FPSGameManager manager;
-
+    Rigidbody rb;
     private void Start()
     {
         // Find Game objects on scene
         healthText = GameObject.Find("HealthPoints").GetComponent<Text>();
+        scoretext = GameObject.Find("Score").GetComponent<Text>();
         deathPanel = GameObject.Find("DeathPanel");
         deathPanel.SetActive(false);
         // Get components for Animators
         playerAnimator = GetComponent<Animator>();
         hurtPanelAnimator = GetComponent<Animator>();
         shootingSound = GetComponent<AudioSource>();
+        rb = GetComponent<Rigidbody>();
+
     }
 
     #region Public Methods
@@ -128,7 +132,9 @@ public class Shooting : MonoBehaviourPunCallbacks
     {
         if (photonView.IsMine)
         {
+            
             photonView.RPC("ServerDeathSound", RpcTarget.AllBuffered);
+            rb.detectCollisions = false;
             playerAnimator.SetBool("IsDead", true);
             StartCoroutine(Respawn());
         }
@@ -140,6 +146,7 @@ public class Shooting : MonoBehaviourPunCallbacks
         playerAnimator.SetBool("IsDead", false);
         respawnText.GetComponent<Text>().text = " ";
         deathPanel.SetActive(false);
+        rb.detectCollisions = true;
         UpdateHealthText();
     }
 
@@ -160,9 +167,27 @@ public class Shooting : MonoBehaviourPunCallbacks
         }
         ResetPlayer();
         // Generate a random value for spawning point
-        int randomPoint = Random.Range(-20, 20);
-
-        transform.position = new Vector3(randomPoint, 50, randomPoint);
+        int randomPoint = Random.Range(1, 5);
+        switch (randomPoint)
+        {
+            case 1:
+                transform.position = new Vector3(randomPoint, 50, randomPoint);
+                break;
+            case 2:
+                transform.position = new Vector3(randomPoint, 50, randomPoint);
+                break;
+            
+            case 3:
+                transform.position = new Vector3(randomPoint, 50, randomPoint);
+                break;
+            case 4:
+                transform.position = new Vector3(randomPoint, 50, randomPoint);
+                break;
+            case 5:
+                transform.position = new Vector3(randomPoint, 50, randomPoint);
+                break;
+        }
+       
        
         // Restore health points of newly spawned player for all clients
         photonView.RPC("RestoreHealth", RpcTarget.AllBuffered);
