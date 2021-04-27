@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class timerCountDown : MonoBehaviour
 {
-    [SerializeField] float startTime = 5f;
+    [SerializeField] float startTime;
     [SerializeField] Slider slider;
     [SerializeField] Text timerText;
 

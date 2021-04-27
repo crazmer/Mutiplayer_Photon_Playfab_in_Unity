@@ -20,8 +20,8 @@ public class FPSGameManager : MonoBehaviour
     #region Spawnner
     void Start()
     {
-        StartCoroutine(TimeStart());
-        Timer();
+       
+        
 
         if (PhotonNetwork.IsConnectedAndReady)
         {
@@ -49,38 +49,7 @@ public class FPSGameManager : MonoBehaviour
         Transform spawnpoint = GetSpawnpoint();
         PhotonNetwork.Instantiate(playerPrefab.name,spawnpoint.position, spawnpoint.rotation);
     }
-    IEnumerator TimeStart() {
-        yield return new WaitForSeconds(10f);
-        
-    }
+    
     #endregion
 
-    #region GameOver
-
-    private IEnumerator Timer()
-    {
-         timer = startTime;
-        do
-        {
-            timer -= Time.deltaTime;
-            
-            int min =(int)(timer/60)%60 ;
-            int sec = (int)(timer%60);
-
-            TimeText.text = "00:00";
-            if (min > 0)
-            {
-                TimeText.text += min + ":";
-            }
-            if (min > 0)
-            {
-                TimeText.text += sec;
-            }
-
-            yield return null;
-        }
-        while (timer > 0);
-    }
-
-    #endregion
 }
