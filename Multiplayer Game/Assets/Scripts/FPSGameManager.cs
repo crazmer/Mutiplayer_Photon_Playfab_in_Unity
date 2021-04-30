@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Photon.Pun;
 using TMPro;
 
@@ -11,7 +12,7 @@ public class FPSGameManager : MonoBehaviour
     public TMP_Text TimeText;
     SpawnPoint[] spawnPoints;
     [SerializeField] GameObject playerPrefab;
-    float timer = 0;
+   
     private void Awake()
     {
         Instance = this;

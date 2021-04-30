@@ -22,6 +22,9 @@ public class Shooting : MonoBehaviourPunCallbacks
 
     public FPSGameManager manager;
     Rigidbody rb;
+
+
+    public int Score;
     private void Start()
     {
         // Find Game objects on scene
@@ -58,7 +61,10 @@ public class Shooting : MonoBehaviourPunCallbacks
                 hit.collider.gameObject.GetComponent<PhotonView>().RPC("TakeDamage",
                     RpcTarget.AllBuffered, (float)randomDamage);
                 photonView.RPC("CreateBloodEffect", RpcTarget.All, hit.point);
+               
             }
+
+
         }
     }
 
@@ -138,6 +144,7 @@ public class Shooting : MonoBehaviourPunCallbacks
             playerAnimator.SetBool("IsDead", true);
             StartCoroutine(Respawn());
         }
+        
     }
 
     // Resets player UI and animation state to initial values
