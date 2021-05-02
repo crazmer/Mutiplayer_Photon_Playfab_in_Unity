@@ -3,7 +3,142 @@ guid: 5d7602f4843d167469af474fe1310521
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MachinegunTurret_BarrelGuard_default2Mat
+    second: {fileID: 2100000, guid: 88e6b7ebc5405d14caf20cf8158f2aa6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MachinegunTurret_Base_default4Mat
+    second: {fileID: 2100000, guid: 22c64c8154913fb42ab53b03d4e3a943, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MachinegunTurret_Base_default6Mat
+    second: {fileID: 2100000, guid: a660b6d9bbac90640a6e09959e1d16ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MachinegunTurret_Gun_default3_polySurface10Mat
+    second: {fileID: 2100000, guid: f448a8c74682c524b8d5189c8020c12f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MachinegunTurret_Gun_default3_polySurface11Mat
+    second: {fileID: 2100000, guid: 251a50ee397fd4c4a9bdd30813d3f96f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MachinegunTurret_Gun_default3_polySurface12Mat
+    second: {fileID: 2100000, guid: b5ac62d6928f4464fa60b22be46c8b56, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MachinegunTurret_Gun_default3_polySurface13Mat
+    second: {fileID: 2100000, guid: 46292f7e39a18f84481d859ee56af528, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MachinegunTurret_Gun_default3_polySurface14Mat
+    second: {fileID: 2100000, guid: 62759179eb6694647a2562ec6586e65f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MachinegunTurret_Gun_default3_polySurface15Mat
+    second: {fileID: 2100000, guid: 88f8d2cef14ab4642a34f559e0702cbf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MachinegunTurret_Gun_default3_polySurface16Mat
+    second: {fileID: 2100000, guid: d836b5245a228cb41a100b45360ec203, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MachinegunTurret_Gun_default3_polySurface17Mat
+    second: {fileID: 2100000, guid: 1b523675a17e87c49bb5ec50366b853b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MachinegunTurret_Gun_default3_polySurface18Mat
+    second: {fileID: 2100000, guid: 04781d0be2bd9684daa1e9a7fc4384c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MachinegunTurret_Gun_default3_polySurface19Mat
+    second: {fileID: 2100000, guid: cf121883c2907b94eaa43be3a89951c7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MachinegunTurret_Gun_default3_polySurface1Mat
+    second: {fileID: 2100000, guid: 743e7651ecee92f4a8dd0ecac9a0b7bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MachinegunTurret_Gun_default3_polySurface20Mat
+    second: {fileID: 2100000, guid: 6738339b156b3454398d816f6fc2ce50, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MachinegunTurret_Gun_default3_polySurface21Mat
+    second: {fileID: 2100000, guid: 68d2a5e5258b38e41849b16db61e8f1f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MachinegunTurret_Gun_default3_polySurface22Mat
+    second: {fileID: 2100000, guid: 525cc81480d5993488fa5a11069dcf5c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MachinegunTurret_Gun_default3_polySurface23Mat
+    second: {fileID: 2100000, guid: 8b38b66f214cd5a409d84352f0ac362a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MachinegunTurret_Gun_default3_polySurface2Mat
+    second: {fileID: 2100000, guid: da5a8004e82a2bd41b5da1f56b1aaad6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MachinegunTurret_Gun_default3_polySurface3Mat
+    second: {fileID: 2100000, guid: 40c43fc2d6461284d832bfc71cff55f4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MachinegunTurret_Gun_default3_polySurface4Mat
+    second: {fileID: 2100000, guid: efa11e30fe5f93d4d92c256f36366935, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MachinegunTurret_Gun_default3_polySurface6Mat
+    second: {fileID: 2100000, guid: fa4fde392b669c2429e550870cc2f162, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MachinegunTurret_Gun_default3_polySurface7Mat
+    second: {fileID: 2100000, guid: d6f3ccf216e201e4bb488345400b526c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MachinegunTurret_Gun_default3_polySurface8Mat
+    second: {fileID: 2100000, guid: 2c4da5071f113be4d905815185d36a2f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MachinegunTurret_Gun_default3_polySurface9Mat
+    second: {fileID: 2100000, guid: 2c042e6a7c943a746ad8c847204f919a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MachinegunTurret_Motor_default5Mat
+    second: {fileID: 2100000, guid: a4332468c2a0240439ec44a655e58434, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: polySurface5_MachinegunTurret_Gun_default3Mat
+    second: {fileID: 2100000, guid: e4cfbc37157a7074b9cda284992360b0, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
