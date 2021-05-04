@@ -1,10 +1,16 @@
 ﻿using UnityEngine;
+using Photon.Pun;
 
 public class bullet : MonoBehaviour
 {
     private Transform target;
-
+    public Shooting Shooting;
     public float speed = 70f;
+    PhotonMessageInfo info;
+    private void Start()
+    {
+        Shooting = GetComponent<Shooting>();
+    }
 
     public void seek(Transform _target)
     {
@@ -35,8 +41,6 @@ public class bullet : MonoBehaviour
 
     void hitTarget()
     {
-        Debug.Log("Khopdi Thod Saale Ka");
-        Destroy(gameObject);
-
+        Shooting.TakeDamage(5,info);
     }
 }

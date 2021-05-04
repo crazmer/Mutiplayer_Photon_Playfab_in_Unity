@@ -29,8 +29,8 @@ public class WayPointController : MonoBehaviour
         Vector3 directionToTarget = targetWaypoint.position - transform.position;
         Quaternion rotationToTarget = Quaternion.LookRotation(directionToTarget);
 
-        Debug.DrawRay(transform.position, transform.forward * 50f,Color.green,0f);
-        Debug.DrawRay(transform.position, directionToTarget, Color.red, 0f);
+       // Debug.DrawRay(transform.position, transform.forward * 50f,Color.green,0f);
+        //Debug.DrawRay(transform.position, directionToTarget, Color.red, 0f);
 
         transform.rotation = Quaternion.Slerp(transform.rotation, rotationToTarget, rotationStep);
 

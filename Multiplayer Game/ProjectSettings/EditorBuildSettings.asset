@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: 062667bb0865a544f9c329da6b65389d
+  - enabled: 1
+    path: Assets/Scenes/botAI.unity
+    guid: 986a8bc47d3f4a5448ead60ddeb571d1
   m_configObjects: {}
