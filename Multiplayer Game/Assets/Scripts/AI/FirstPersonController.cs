@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FirstPersonController : MonoBehaviour
 {
+    public Text score;
     // References
     [SerializeField] private Transform cameraTransform;
+    int Range = 10000;
    // [SerializeField] private CharacterController characterController;
 
     // Player settings
@@ -20,9 +24,9 @@ public class FirstPersonController : MonoBehaviour
     // Camera control
     private Vector2 lookInput;
     private float cameraPitch;
-
+    int temp;
     // Player movement
-   // private Vector2 moveTouchStartPosition;
+    // private Vector2 moveTouchStartPosition;
     //private Vector2 moveInput;
 
     // Start is called before the first frame update
@@ -58,6 +62,13 @@ public class FirstPersonController : MonoBehaviour
             Debug.Log("Moving");
             Move();
         }
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Debug.Log("touch");
+            Shoot();
+        }
+        score.text = "Score  " + temp.ToString();
     }
 
     void GetTouchInput() {
@@ -148,6 +159,30 @@ public class FirstPersonController : MonoBehaviour
         //Vector2 movementDirection = moveInput.normalized * moveSpeed * Time.deltaTime;
         // Move relatively to the local transform's direction
        // characterController.Move(transform.right * movementDirection.x + transform.forward * movementDirection.y);
+    }
+
+    public void Shoot()
+    {
+        RaycastHit hit;
+       if( Physics.Raycast(cameraTransform.position, cameraTransform.forward, out hit, Range))
+        {
+            if(hit.collider.tag == ("Player"))
+            {
+                Debug.Log("Attack");
+                Destroy(hit.collider.gameObject);
+                temp++ ;
+                
+            }
+        }
+    }
+
+    public void Respawn()
+    {
+        SceneManager.LoadScene("botAI");
+    }
+    public void RespawnBack()
+    {
+        SceneManager.LoadScene("LobbyScene");
     }
 
 }
