@@ -11,6 +11,7 @@ public class Shooting : MonoBehaviourPunCallbacks
     public GameObject bloodEffect;
     public AudioSource shootingSound;
     public AudioSource deathSound;
+    public int score = 100;
 
     private Text healthText;
     private Text scoretext;
@@ -29,7 +30,7 @@ public class Shooting : MonoBehaviourPunCallbacks
     {
         // Find Game objects on scene
         healthText = GameObject.Find("HealthPoints").GetComponent<Text>();
-        scoretext = GameObject.Find("Score").GetComponent<Text>();
+        scoretext = GameObject.Find("scoretext").GetComponent<Text>();
         deathPanel = GameObject.Find("DeathPanel");
         deathPanel.SetActive(false);
         // Get components for Animators
@@ -37,6 +38,7 @@ public class Shooting : MonoBehaviourPunCallbacks
         hurtPanelAnimator = GetComponent<Animator>();
         shootingSound = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
+        scoretext.text = "Score:" + score.ToString();
 
     }
 
@@ -143,6 +145,8 @@ public class Shooting : MonoBehaviourPunCallbacks
             rb.detectCollisions = false;
             playerAnimator.SetBool("IsDead", true);
             StartCoroutine(Respawn());
+            score--;
+            scoretext.text = "Score:" + score.ToString();
         }
         
     }

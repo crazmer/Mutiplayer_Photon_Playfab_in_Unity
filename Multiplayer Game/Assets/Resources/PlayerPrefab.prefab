@@ -3271,6 +3271,7 @@ MonoBehaviour:
     type: 3}
   shootingSound: {fileID: 2231008441450478983}
   deathSound: {fileID: 8489251377239327993}
+  score: 100
   manager: {fileID: 5525799088687097077, guid: 23b2537608a70f245832a26900e4d7d3, type: 3}
   Score: 0
 --- !u!82 &2231008441450478983
